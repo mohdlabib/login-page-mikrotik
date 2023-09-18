@@ -1,0 +1,58 @@
+.sec-paket {
+    .hide {
+        display: none;
+    }
+
+    .btn-buy {
+        background-color: #e74c4c;
+        color: white;
+    }
+
+    .modal-content {
+        border-radius: 11px;
+    }
+
+    .card-header {
+        $br-card: 10px;
+
+        border-top-left-radius: $br-card;
+        border-top-right-radius: $br-card;
+
+        h6 {
+            margin-top: 5px;
+            margin-bottom: 3px;
+            color: white;
+        }
+
+        &.silver {
+            background-color: #d15422;
+        }
+
+        &.platinum {
+            background-color: #968f85;
+        }
+
+        &.gold {
+            background-color: #e8d124;
+        }
+    }
+
+    .card .paket {
+        .table {
+            margin: -10px 0 0 0;
+            border: none;
+
+            td, th {
+                border: none;
+            }
+
+            tr {
+                margin-bottom: -20px !important
+            }
+
+            .head {
+                text-align: center;
+            }
+        }
+    }
+}

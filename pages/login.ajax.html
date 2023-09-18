@@ -1,0 +1,88 @@
+<div class="title-page" data-aos="fade-up">
+    <h5>Selamat Datang</h5>
+    <p>Nikmati access internet cepat & stabil</p>
+</div>
+
+<div class="card border-0 shadow my-2 wifi-position" data-aos="fade-up">
+    <div class="status shadow">
+        <i class="fa-solid fa-wifi fa-fade"></i>
+        <span>hostpot 1</span>
+    </div>
+
+    <div id="map"></div>
+</div>
+
+<form class="mt-4 form-login" data-aos="fade-up" name="login" action="$(link-login-only)" method="post" $(if chap-id)
+    onSubmit="return doLogin()" $(endif)>
+    <input type="hidden" name="dst" value="$(link-orig)" />
+    <input type="hidden" name="popup" value="true" />
+
+    <p>Silahkan masukan akun member, lalu login</p>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Burham" value="$(username)"
+            required="required" autocomplete="off" name="username">
+    </div>
+
+    <div class="mb-3">
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="********" name="password"
+            required="required" autocomplete="off">
+    </div>
+
+    <div class="row buttons">
+        <div class="col-8 d-grid gap-2 btn-left">
+            <button type="submit" class="btn blue">
+                <i class="fa-solid fa-user-group"></i> <span>Masuk</span>
+            </button>
+        </div>
+        <div class="col-4 d-grid gap-2 btn-right">
+            <button type="button" onclick="loads('./pages/qrcode.ajax.html', 'Qrcode');" class="btn yellow">
+                <i class="fa-solid fa-qrcode fa-beat"></i> <span>QR code</span>
+            </button>
+        </div>
+    </div>
+
+</form>
+
+<div class="mt-2 menu" data-aos="fade-up">
+    <p>Belum ada akun? <a href="#" onclick="modalPaket(event)" data-info="trial">Coba gratis</a> aja.</p>
+
+
+    <div class="card border-0 shadow mt-3 bg-warning" data-aos="fade-up" data-aos-duration="1500">
+        <div class="card-body p-3">
+            <h6><i class="fa-solid fa-network-wired fa-bounce"></i> Daftar paket wifi</h6>
+
+            <hr class="garis">
+
+            <div class="paket">
+                <a href="#" onclick="modalPaket(event)" data-info="silver" class="btn">🥉 Silver</a>
+                <a href="#" onclick="modalPaket(event)" data-info="platinum" class="btn">🥈 Platinum</a>
+                <a href="#" onclick="modalPaket(event)" data-info="gold" class="btn">🥇 Gold</a>
+            </div>
+
+            <a href="#" onclick="modalPaket(event)" data-info="full" class="link">Selengkapnya <i
+                    class="fa-solid fa-angle-right"></i></a>
+        </div>
+    </div>
+</div>
+
+<script>
+    var map = L.map('map', {
+        zoomControl: false
+    }).setView([0.47780, 101.37499], 16.5);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+    }).addTo(map);
+
+    var circle = L.circle([0.47780, 101.37499], {
+        fillColor: 'blue',
+        fillOpacity: 0.2,
+        radius: 70,
+    }).addTo(map);
+
+    if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(showMap);
+    } else {
+        console.log('Geolocation tidak tersedia di browser ini.');
+    }
+</script>

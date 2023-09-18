@@ -1,0 +1,36 @@
+.scan {
+    $border-radius-card: 20px;
+    border-radius: $border-radius-card;
+    margin-bottom: -70px;
+    
+    #preview {
+        background-color: #fff;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+        border: 4px solid #4c94e7;
+        border-radius: $border-radius-card;
+        transform: scaleX(-1) !important;
+        transform: scaleY(1) !important;
+        width: 100% !important;
+        height: 344px;
+        object-fit: cover;
+    }
+
+    .menu-atas {
+        position: relative;
+        z-index: 9999;
+        top: -343px;
+        margin: 14px 7px;
+
+        a {
+            z-index: 9999;
+            padding: 10px 9px;
+            background-color: #337CCF;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 100px;
+
+            img {
+                margin-top: -3px;
+            }
+        }
+    }
+}

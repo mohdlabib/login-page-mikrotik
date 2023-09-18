@@ -1,0 +1,74 @@
+.sec-payment {
+    @import "./maps";
+
+    .wifi-info {
+        background-color: #f7ad0e;
+        p {
+            margin-left: 10px;
+            margin-bottom: -1px;
+            font-size: 14px;
+            color: #5f5f5f;
+            font-weight: bolder;
+        }
+
+        h6 {
+            color: #494949;
+            font-weight: bolder;
+
+            span {
+                margin-left: 6px;
+            }
+        }
+    }
+
+    .wifi-form {
+        .form-control {
+            border-radius: 10px;
+            height: 44px;
+            font-size: 14.5px;
+            background-color: #f1f1f1;
+            border: none;
+        }
+
+        .form-control::placeholder {
+            color: #6d6c6c;
+        }
+
+        .btn-pay {
+            background-color: #38de5e;
+            border-radius: 10px;
+            color: #fff;
+        }
+
+        p {
+            color: #5a5a5a;
+            font-size: 13.5px;
+            font-weight: bolder;
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: -1px;
+            margin-left: 10px;
+        }
+    }
+
+    .wifi-catatan {
+        .card-header {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-color: #fd4141;
+            color: white;
+        }
+
+        p {
+            color: rgb(43, 43, 43);
+            font-size: 14px;
+            margin-bottom: 1px;
+        }
+    }
+
+    .garis {
+        border: 2px solid #3e3506;
+        border-radius: 100px;
+        margin: 5px 0 5px 0;
+    }
+}

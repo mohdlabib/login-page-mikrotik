@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Rubik:wght@400;500;700&display=swap");
+.sec-login .scan {
+  border-radius: 20px;
+  margin-bottom: -70px;
+}
+.sec-login .scan #preview {
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  border: 4px solid #4c94e7;
+  border-radius: 20px;
+  transform: scaleX(-1) !important;
+  transform: scaleY(1) !important;
+  width: 100% !important;
+  height: 344px;
+  object-fit: cover;
+}
+.sec-login .scan .menu-atas {
+  position: relative;
+  z-index: 9999;
+  top: -343px;
+  margin: 14px 7px;
+}
+.sec-login .scan .menu-atas a {
+  z-index: 9999;
+  padding: 10px 9px;
+  background-color: #337CCF;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+}
+.sec-login .scan .menu-atas a img {
+  margin-top: -3px;
+}
+.sec-login .form-login p {
+  color: #353535;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.sec-login .form-login .form-control {
+  border-radius: 9px;
+  height: 44px;
+  font-size: 14.5px;
+  background-color: #f1f1f1;
+  border: none;
+}
+.sec-login .form-login .form-control::placeholder {
+  color: #6d6c6c;
+}
+.sec-login .form-login .buttons .btn-left {
+  padding-right: 4px;
+}
+.sec-login .form-login .buttons .btn-right {
+  padding-left: 4px;
+}
+.sec-login .form-login .buttons .btn {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  border-radius: 9px;
+  height: 45px;
+  font-size: 13.3px;
+  color: #fff;
+}
+.sec-login .form-login .buttons .btn span {
+  margin-left: 5px;
+}
+.sec-login .form-login .buttons .btn.blue {
+  background-color: #4c94e7;
+}
+.sec-login .form-login .buttons .btn.yellow {
+  background-color: #f7ad0e;
+}
+.sec-login .menu p {
+  margin-top: 14px;
+  color: #5a5a5a;
+  font-size: 13.5px;
+  font-weight: bolder;
+}
+.sec-login .menu h6 {
+  color: #4c4545;
+  font-size: 14px;
+  font-weight: bolder;
+}
+.sec-login .menu .paket {
+  margin-bottom: 10px;
+}
+.sec-login .menu .paket .btn {
+  border: 2px solid #ffd000;
+  background-color: #ffd000;
+  color: #fff;
+  font-size: 12.5px;
+  height: 33px;
+  font-weight: bolder;
+}
+.sec-login .menu .paket .btn:hover,
+.sec-login .menu .paket .btn:active {
+  border: 2px solid #00ccff;
+}
+.sec-login .menu .link {
+  color: #4c4545;
+  font-size: 12.4px;
+  font-weight: 700;
+}
+.sec-login .garis {
+  border: 2px solid #444242;
+  border-radius: 100px;
+  margin: 5px 0 15px 0;
+}
+.sec-login .wifi-position {
+  margin-top: 27px;
+}
+.sec-login .wifi-position #map {
+  width: 100%;
+  height: 145px;
+  border-radius: 13px;
+}
+.sec-login .wifi-position .status {
+  font-family: "Rubik", sans-serif;
+  border-radius: 13px;
+  position: absolute;
+  margin: 20px 20px;
+  padding: 10px 15px;
+  top: -12px;
+  left: -12.5px;
+  background-color: #337CCF;
+  color: #ffffff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec-login .wifi-position .status span {
+  font-size: 13px;
+  margin-left: 8px;
+  font-weight: bolder;
+}
+.sec-login .title-page {
+  color: #fff;
+}
+.sec-login .title-page h5 {
+  font-weight: bolder;
+  margin-bottom: 3px;
+}
+.sec-login .title-page p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.sec-paket .hide {
+  display: none;
+}
+.sec-paket .btn-buy {
+  background-color: #e74c4c;
+  color: white;
+}
+.sec-paket .modal-content {
+  border-radius: 11px;
+}
+.sec-paket .card-header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.sec-paket .card-header h6 {
+  margin-top: 5px;
+  margin-bottom: 3px;
+  color: white;
+}
+.sec-paket .card-header.silver {
+  background-color: #d15422;
+}
+.sec-paket .card-header.platinum {
+  background-color: #968f85;
+}
+.sec-paket .card-header.gold {
+  background-color: #e8d124;
+}
+.sec-paket .card .paket .table {
+  margin: -10px 0 0 0;
+  border: none;
+}
+.sec-paket .card .paket .table td, .sec-paket .card .paket .table th {
+  border: none;
+}
+.sec-paket .card .paket .table tr {
+  margin-bottom: -20px !important;
+}
+.sec-paket .card .paket .table .head {
+  text-align: center;
+}
+
+.sec-payment .wifi-position {
+  margin-top: 27px;
+}
+.sec-payment .wifi-position #map {
+  width: 100%;
+  height: 145px;
+  border-radius: 13px;
+}
+.sec-payment .wifi-position .status {
+  font-family: "Rubik", sans-serif;
+  border-radius: 13px;
+  position: absolute;
+  margin: 20px 20px;
+  padding: 10px 15px;
+  top: -12px;
+  left: -12.5px;
+  background-color: #337CCF;
+  color: #ffffff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec-payment .wifi-position .status span {
+  font-size: 13px;
+  margin-left: 8px;
+  font-weight: bolder;
+}
+.sec-payment .title-page {
+  color: #fff;
+}
+.sec-payment .title-page h5 {
+  font-weight: bolder;
+  margin-bottom: 3px;
+}
+.sec-payment .title-page p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+}
+.sec-payment .wifi-info {
+  background-color: #f7ad0e;
+}
+.sec-payment .wifi-info p {
+  margin-left: 10px;
+  margin-bottom: -1px;
+  font-size: 14px;
+  color: #5f5f5f;
+  font-weight: bolder;
+}
+.sec-payment .wifi-info h6 {
+  color: #494949;
+  font-weight: bolder;
+}
+.sec-payment .wifi-info h6 span {
+  margin-left: 6px;
+}
+.sec-payment .wifi-form .form-control {
+  border-radius: 10px;
+  height: 44px;
+  font-size: 14.5px;
+  background-color: #f1f1f1;
+  border: none;
+}
+.sec-payment .wifi-form .form-control::placeholder {
+  color: #6d6c6c;
+}
+.sec-payment .wifi-form .btn-pay {
+  background-color: #38de5e;
+  border-radius: 10px;
+  color: #fff;
+}
+.sec-payment .wifi-form p {
+  color: #5a5a5a;
+  font-size: 13.5px;
+  font-weight: bolder;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: -1px;
+  margin-left: 10px;
+}
+.sec-payment .wifi-catatan .card-header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #fd4141;
+  color: white;
+}
+.sec-payment .wifi-catatan p {
+  color: rgb(43, 43, 43);
+  font-size: 14px;
+  margin-bottom: 1px;
+}
+.sec-payment .garis {
+  border: 2px solid #3e3506;
+  border-radius: 100px;
+  margin: 5px 0 5px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+footer small {
+  font-size: 12px;
+  color: rgb(128, 128, 128);
+  font-weight: 500;
+}
+
+.card {
+  border-radius: 13px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  background-color: #fafafa;
+  background-image: url("../svg/bg.svg");
+  background-repeat: no-repeat;
+  background-size: 260% 170px;
+  border-bottom-left-radius: 25px;
+}
+body.bg-img {
+  background-image: none !important;
+}
+body .btn {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  border-radius: 9px;
+  font-size: 13.3px;
+  color: #fff;
+}
+body .btn.btn-success {
+  background-color: #a5db37;
+  border: none;
+}

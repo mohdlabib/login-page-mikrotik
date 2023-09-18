@@ -1,0 +1,106 @@
+.sec-login {
+
+    @import "./qrcode";
+
+    .form-login {
+        p {
+            color: #353535;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            border-radius: 9px;
+            height: 44px;
+            font-size: 14.5px;
+            background-color: #f1f1f1;
+            border: none;
+        }
+
+        .form-control::placeholder {
+            color: #6d6c6c;
+        }
+
+        .buttons {
+            .btn-left {
+                padding-right: 4px;
+            }
+
+            .btn-right {
+                padding-left: 4px;
+            }
+
+            .btn {
+                font-family: 'Rubik', sans-serif;
+                font-weight: 500;
+                border-radius: 9px;
+                height: 45px;
+                font-size: 13.3px;
+                color: #fff;
+
+                span {
+                    margin-left: 5px;
+                }
+
+                &.blue {
+                    background-color: #4c94e7;
+                }
+
+                &.yellow {
+                    background-color: #f7ad0e;
+                }
+            }
+        }
+    }
+
+    .menu {
+        p {
+            margin-top: 14px;
+            color: #5a5a5a;
+            font-size: 13.5px;
+            font-weight: bolder;
+        }
+
+        h6 {
+            color: #4c4545;
+            font-size: 14px;
+            font-weight: bolder;
+        }
+
+        .paket {
+            $btn-paket: #ffd000;
+            margin-bottom: 10px;
+
+            .btn {
+                border: 2px solid $btn-paket;
+                background-color: $btn-paket;
+                color: #fff;
+                font-size: 12.5px;
+                height: 33px;
+                font-weight: bolder;
+            }
+
+            .btn:hover,
+            .btn:active {
+                border: 2px solid #00ccff;
+            }
+
+        }
+
+        .link {
+            color: #4c4545;
+            font-size: 12.4px;
+            font-weight: 700;
+        }
+    }
+
+    .garis {
+        border: 2px solid #444242;
+        border-radius: 100px;
+        margin: 5px 0 15px 0;
+    }
+
+    @import "./maps";
+
+}

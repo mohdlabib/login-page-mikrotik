@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+    <link rel="stylesheet" href="vendor/bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/aos/aos.css">
+    <link rel="stylesheet" href="vendor/alert/sweetalert2.min.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <title>liHospot</title>
+</head>
+
+<body>
+    $(if chap-id)
+    <form name="sendin" action="$(link-login-only)" method="post">
+        <input type="hidden" name="username" />
+        <input type="hidden" name="password" />
+        <input type="hidden" name="dst" value="$(link-orig)" />
+        <input type="hidden" name="popup" value="true" />
+    </form>
+    <script type="text/javascript" src="assets/js/md5.js"></script>
+    <script type="text/javascript">
+        function doLogin() {
+            document.sendin.username.value = document.login.username.value;
+            document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+            document.sendin.submit();
+            return false;
+        }
+    </script>
+    $(endif)
+
+    <div id="addRow">
+        <section class="sec-login container mt-4 col-md-4 mx-auto" id="app"></section>
+    </div>
+
+    <footer>
+        <small>powered by ❤ karibsdev</small>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade sec-paket" id="staticBackdrop" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content mt-5">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Paket wifi</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- paket -->
+                    <div class="card border-0 shadow paket-silver">
+                        <div class="card-header silver">
+                            <h6>🥉 Paket Silver</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="paket">
+                                <table class="table">
+                                    <tr>
+                                        <th>Durasi</th>
+                                        <th>Harga</th>
+                                        <th>Speed</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>1 Hari</td>
+                                        <td>Rp 3.000</td>
+                                        <td>3 Mb</td>
+                                        <td>
+                                            <a href="http://localhost/mikrotik-page?paket=silver&price=3000&exp=1&idPaket=S1">
+                                                <span class="badge btn-buy">Beli</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7 Hari</td>
+                                        <td>Rp 15.000</td>
+                                        <td>3 Mb</td>
+                                        <td>
+                                            <a href="http://localhost/mikrotik-page?paket=silver&price=15000&exp=7&idPaket=S2">
+                                                <span class="badge btn-buy">Beli</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>30 Hari</td>
+                                        <td>Rp 35.000</td>
+                                        <td>3 Mb</td>
+                                        <td>
+                                            <a href="http://localhost/mikrotik-page?paket=silver&price=35000&exp=30&idPaket=S3">
+                                                <span class="badge btn-buy">Beli</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- paket 2 -->
+                    <div class="card border-0 shadow mt-3 paket-platinum">
+                        <div class="card-header platinum">
+                            <h6>🥈 Paket Platinum</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="paket">
+                                <table class="table">
+                                    <tr>
+                                        <th>Durasi</th>
+                                        <th>Harga</th>
+                                        <th>Speed</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>1 Hari</td>
+                                        <td>Rp 5.000</td>
+                                        <td>5 Mb</td>
+                                        <td>
+                                            <a href="http://localhost/mikrotik-page?paket=platinum&price=5000&exp=1&idPaket=P1">
+                                                <span class="badge btn-buy">Beli</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7 Hari</td>
+                                        <td>Rp 17.000</td>
+                                        <td>5 Mb</td>
+                                        <td>
+                                            <a href="http://localhost/mikrotik-page?paket=platinum&price=17000&exp=7&idPaket=P2">
+                                                <span class="badge btn-buy">Beli</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>30 Hari</td>
+                                        <td>Rp 45.000</td>
+                                        <td>5 Mb</td>
+                                        <td>
+                                            <a href="http://localhost/mikrotik-page?paket=platinum&price=45000&exp=30&idPaket=P3">
+                                                <span class="badge btn-buy">Beli</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- paket 3 -->
+                    <div class="card border-0 shadow mt-3 paket-gold">
+                        <div class="card-header gold">
+                            <h6>🥇 Paket Gold</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="paket">
+                                <table class="table">
+                                    <tr>
+                                        <th>Durasi</th>
+                                        <th>Harga</th>
+                                        <th>Speed</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>1 Hari</td>
+                                        <td>Rp 7.000</td>
+                                        <td>10 Mb</td>
+                                        <td>
+                                            <a href="http://localhost/mikrotik-page?paket=gold&price=7000&exp=1&idPaket=G1">
+                                                <span class="badge btn-buy">Beli</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7 Hari</td>
+                                        <td>Rp 25.000</td>
+                                        <td>10 Mb</td>
+                                        <td>
+                                            <a href="http://localhost/mikrotik-page?paket=gold&price=25000&exp=7&idPaket=G2">
+                                                <span class="badge btn-buy">Beli</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>30 Hari</td>
+                                        <td>Rp 60.000</td>
+                                        <td>10 Mb</td>
+                                        <td>
+                                            <a href="http://localhost/mikrotik-page?paket=gold&price=60000&exp=30&idPaket=G3">
+                                                <span class="badge btn-buy">Beli</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/fontawesome/all.min.js"></script>
+    <script src="vendor/bs/js/bootstrap.min.js"></script>
+    <script src="vendor/instascan/instascan.min.js"></script>
+    <script src="vendor/leaflet/leaflet.js"></script>
+    <script src="vendor/jsqr/dist/jsQR.js"></script>
+    <script src="vendor/alert/sweetalert2.all.min.js"></script>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        const paketSilver = document.querySelector('.paket-silver');
+        const paketPlatinum = document.querySelector('.paket-platinum');
+        const paketGold = document.querySelector('.paket-gold');
+
+        const modalPaket = e => {
+            e.preventDefault();
+
+            let id = e.target.getAttribute('data-info');
+            switch (id) {
+                case 'silver':
+                    // focus packet
+                    paketSilver.classList.remove('hide');
+                    paketSilver.classList.remove('mt-3');
+
+                    // packet
+                    paketPlatinum.classList.add('hide');
+                    paketGold.classList.add('hide');
+
+                    $('#staticBackdrop').modal('show');
+                    break;
+                case 'platinum':
+                    // focus packet
+                    paketPlatinum.classList.remove('hide');
+                    paketPlatinum.classList.remove('mt-3');
+
+                    // packet
+                    paketSilver.classList.add('hide');
+                    paketGold.classList.add('hide');
+
+                    $('#staticBackdrop').modal('show');
+                    break;
+                case 'gold':
+                    // focus packet
+                    paketGold.classList.remove('hide');
+                    paketGold.classList.remove('mt-3');
+
+                    // packet
+                    paketSilver.classList.add('hide');
+                    paketPlatinum.classList.add('hide');
+
+                    $('#staticBackdrop').modal('show');
+                    break;
+                case 'trial':
+                    window.location.href = "http://localhost/mikrotik-page?paket=trial";
+                    break;
+                default:
+                    paketPlatinum.classList.add('mt-3');
+                    paketGold.classList.add('mt-3');
+
+
+                    paketGold.classList.remove('hide');
+                    paketSilver.classList.remove('hide');
+                    paketPlatinum.classList.remove('hide');
+
+                    $('#staticBackdrop').modal('show');
+                    break;
+            }
+        }
+
+
+        loads("pages/login.ajax.html", "Login");
+
+        function loads(url, title) {
+            $("#app").load(url);
+            document.title = "liHospot | " + title;
+        }
+
+        AOS.init();
+
+        function showMap(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            map.setView([latitude, longitude], 16.5);
+
+            const personIcon = L.icon({
+                iconUrl: 'assets/img/mark.png',
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32]
+            });
+
+            L.marker([latitude, longitude], {
+                icon: personIcon
+            }).addTo(map)
+        }
+
+        const qrcodeG = (data) => {
+            console.log(data)
+        };
+    </script>
+    <script>
+        window.addEventListener('load', addRowIfDesktop);
+        window.addEventListener('resize', addRowIfDesktop);
+    </script>
+    <script>
+        let error = "$(error)";
+
+        if (error == "credit limit reached") {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                html: "Batas kredit user <b>$(username)</b>, sudah habis."
+            })
+
+        } else if (error == "uptime limit reached") {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                html: "Masa aktif user <b>$(username)</b>, sudah habis."
+            })
+
+        } else if (error == "download limit reached") {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                html: "Kuota user <b>$(username)</b>, telah habis."
+            })
+
+        } else if (error == "no valid profile found") {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                html: "Masa aktif user <b>$(username)</b>, telah habis."
+            })
+
+        } else if (error == "invalid password") {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: "username / password tidak valid!"
+            })
+
+        } else if (error == "simultaneous session limit reached") {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                html: "User <b>$(username)</b> sudah login di device lain</div>"
+            })
+
+        } else if (error) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                html: "<b>$(error)</b>"
+            })
+        }
+    </script>
+</body>
+
+</html>
