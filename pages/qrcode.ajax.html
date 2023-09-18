@@ -39,6 +39,15 @@
 
 </form>
 
+<form class="" name="login" action="$(link-login-only)" method="post" $(if chap-id)
+    onSubmit="return doLogin()" $(endif)>
+    <input type="hidden" name="dst" value="$(link-orig)" />
+    <input type="hidden" name="popup" value="true" />
+    <input type="text"  name="username" id="username">
+    <input type="password"  name="password" id="password">
+    <button type="submit">Submit</button>
+</form>
+
 <div class="mt-2 menu" data-aos="fade-up">
     <p>Belum ada akun? <a href="#" onclick="modalPaket(event)" data-info="trial">Coba gratis</a> aja.</p>
 
@@ -154,6 +163,30 @@
     scanner.addListener("scan", function (content) {
         qrcodeG(content)
     });
+
+    function qrcodeG(data) {
+        if (data.includes("-")) {
+            var parts = data.split("-");
+
+            var username = parts[0];
+            var password = parts[1];
+
+            var usernameInput = document.getElementById("username");
+            var passwordInput = document.getElementById("password");
+
+            usernameInput.value = username;
+            passwordInput.value = password;
+
+            document.forms["login"].submit();
+
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                html: "Qrcode salah."
+            })
+        }
+    }
 </script>
 
 <script>
