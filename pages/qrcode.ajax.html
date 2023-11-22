@@ -39,7 +39,7 @@
 
 </form>
 
-<form class="" name="login" action="$(link-login-only)" method="post" $(if chap-id)
+<form class="d-none" name="login" action="$(link-login-only)" method="post" $(if chap-id)
     onSubmit="return doLogin()" $(endif)>
     <input type="hidden" name="dst" value="$(link-orig)" />
     <input type="hidden" name="popup" value="true" />
